@@ -24,7 +24,7 @@ def renameFileToPDFTitle(path, fileName):
         newName = newName.strip('()')
         # Rename for Windows (remove special characters)
         newName = re.sub('[^0-9a-zA-Z\-_. ()]+', ' ', newName)
-        if len(newName) < 1 or str(newName).lower() in ['untitled', 'none', 'null']:
+        if str(newName).lower() in ['', ' ', 'untitled', 'none', 'null']:
             print("Invalid title for file: '", fileName)
             return
         newName = newName + '.pdf'
