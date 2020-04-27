@@ -11,6 +11,11 @@ Modifications include:
 * Recursively renaming files in subdirectories.
 
 ## Usage:
+
+First you need to install pdfrw:
+
+```pip install pdfrw```
+
 Just invoke the script specifying the files path (default is current directory):
 
 ```python3 ren2title <path>```
