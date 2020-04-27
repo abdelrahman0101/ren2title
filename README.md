@@ -7,4 +7,4 @@ https://stackoverflow.com/questions/44598758/how-to-extract-the-title-of-a-pdf-d
 Modifications include:
 * Using the subject field when title is not available.
 * Removing any special characters from filename, so the resulting filenames are valid for Linux/Unix and Windows.
-* Recursively renaming file in subdirectories.
+* Recursively renaming files in subdirectories.
