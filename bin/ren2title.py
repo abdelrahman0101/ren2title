@@ -1,22 +1,29 @@
 import os
 import sys
 import re
-from pdfrw import PdfReader
+from PyPDF2 import PdfFileReader
 
 if len(sys.argv) < 2:
     path = '.'
 else:
     path = str(sys.argv[1])
 
+def getFileInfo(filePath):
+    with open(filePath, 'rb') as f:
+        pdf = PdfFileReader(f)
+        info = pdf.getDocumentInfo()
+        return info
+    
+
 def renameFileToPDFTitle(path, fileName):
     fullName = os.path.join(path, fileName)
     try:
-        fileInfo = PdfReader(fullName).Info
+        fileInfo = getFileInfo(fullName)
         if not fileInfo:
             print("No metadata for file: '", fileName) 
             return
         # Extract pdf title or subject from pdf file
-        newName = fileInfo.Title or fileInfo.Subject
+        newName = fileInfo.title or fileInfo.subject
         if (not newName):
             print("No title or subject found in file: '", fileName) 
             return
@@ -48,6 +55,4 @@ def renPdf(directory):
         renameFileToPDFTitle(directory, fileName)
 
 renPdf(path)
-      	
-      	
-      	 
+
