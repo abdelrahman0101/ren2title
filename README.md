@@ -12,9 +12,9 @@ Modifications include:
 
 ## Usage:
 
-First you need to install pdfrw:
+First you need to install PyPDF2:
 
-```pip install pdfrw```
+```pip install PyPDF2```
 
 Invoke the script specifying the files path (default is current directory):
 
