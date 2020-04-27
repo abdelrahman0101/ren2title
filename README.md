@@ -10,7 +10,7 @@ Modifications include:
 * Removing any special characters from filename, so the resulting filenames are valid for Linux/Unix and Windows.
 * Recursively renaming files in subdirectories.
 
-Usage:
+## Usage:
 Just invoke the script specifying the files path (default is current directory):
 
 ```python3 ren2title <path>```
