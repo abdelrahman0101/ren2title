@@ -1,7 +1,7 @@
 # Ren2Title
 A Python script to rename PDF files to titles or subjects stored in files metadata. Useful for research papers downloaded from online repositories.
 
-This script is based on the code in this StackOverflow thread:
+This script is based on code from this StackOverflow thread:
 https://stackoverflow.com/questions/44598758/how-to-extract-the-title-of-a-pdf-document-from-within-a-script-for-renaming
 
 Modifications include:
